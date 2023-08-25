@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <TextBox x:Name="inputBox"  HorizontalAlignment="Left" Height="31" Margin="177,92,0,0" TextWrapping="Wrap" Text="" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" VerticalAlignment="Top" Width="207" TextChanged="TextBox_TextChanged" TextAlignment="Center" Background="#FF878787" BorderBrush="White" Foreground="White"/>
+        <Button x:Name="AddBtn" Content="Add Task" HorizontalAlignment="Left" Height="41" Margin="471,92,0,0" VerticalAlignment="Top" Width="147" Click="Button_Click" FontSize="18" FontFamily="Arial" Background="Red" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White"/>
+        <StackPanel HorizontalAlignment="Left" Height="135" Margin="250,177,0,0" VerticalAlignment="Top" Width="229"/>
     </Grid>
 </Window>
