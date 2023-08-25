@@ -9,16 +9,14 @@ namespace to_do_list
        public class Task
        {
               public int Id { get; set; }
-              public string Description { get; set; }
+              public string? Description { get; set; }
               public bool IsCompleted { get; set; }
 
-
-              public void CreatingTask(string descriptipon)
+              public Task(string description, int id)
               {
-                     Task token = new();
-
-
-
+                     Description = description;
+                     Id = id;
+                     IsCompleted = false;
               }
        }
 }

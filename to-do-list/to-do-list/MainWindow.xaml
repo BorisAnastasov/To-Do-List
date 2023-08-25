@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="inputBox"  HorizontalAlignment="Left" Height="41" Margin="154,102,0,0" TextWrapping="Wrap" Text="Text" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" VerticalAlignment="Top" Width="219" TextChanged="TextBox_TextChanged" TextAlignment="Center" Background="#FF878787" BorderBrush="White" Foreground="White" Cursor="Hand" FontFamily="Arial" FontSize="16" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="inputBox"  HorizontalAlignment="Left" Height="41" Margin="154,102,0,0" TextWrapping="Wrap" Text="Text" VerticalAlignment="Top" Width="219" TextChanged="TextBox_TextChanged" TextAlignment="Center" Background="#FF878787" BorderBrush="White" Foreground="White" Cursor="Hand" FontFamily="Arial" FontSize="16" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center"/>
         <Button x:Name="AddBtn" Content="Add Task" HorizontalAlignment="Left" Height="41" Margin="486,102,0,0" VerticalAlignment="Top" Width="147" Click="Button_Click" FontSize="18" FontFamily="Arial" Background="Red" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White"/>
-        <StackPanel HorizontalAlignment="Left" Height="135" Margin="277,200,0,0" VerticalAlignment="Top" Width="230"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Center" Height="202" Margin="0,182,0,0" VerticalAlignment="Top" Width="164" d:ItemsSource="{d:SampleData ItemCount=5}"/>
     </Grid>
 </Window>

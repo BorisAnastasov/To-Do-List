@@ -20,11 +20,13 @@ namespace to_do_list
        /// </summary>
        public partial class MainWindow : Window
        {
+              public TaskManager taskManager = new();
+
               public MainWindow()
               {
                      InitializeComponent();
               }
-              
+
               private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
               {
 
@@ -37,9 +39,15 @@ namespace to_do_list
 
               private void Button_Click(object sender, RoutedEventArgs e)
               {
-                  string input = inputBox.Text;
-                     TaskManager tokenManager = new();
-                     tokenManager.CreatingTask(input);
+                     string input = inputBox.Text;
+                     inputBox.Text = "";
+                     int id = taskManager.Tasks.Count;
+
+                     Task task = new(input, id);
+
+                     taskManager.AddTask(task);
+
+                     taskManager.ShowAllTasks(listBox);
               }
        }
 }
