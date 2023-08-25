@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace to_do_list
 {
-       /// <summary>
-       /// Interaction logic for MainWindow.xaml
-       /// </summary>
        public partial class MainWindow : Window
        {
               public TaskManager taskManager = new();
@@ -32,11 +29,6 @@ namespace to_do_list
 
               }
 
-              private void TextBox_Click(object sender, TextChangedEventArgs e)
-              {
-                     inputBox.Text = string.Empty;
-              }
-
               private void Button_Click(object sender, RoutedEventArgs e)
               {
                      string input = inputBox.Text;
@@ -48,6 +40,22 @@ namespace to_do_list
                      taskManager.AddTask(task);
 
                      taskManager.ShowAllTasks(listBox);
+              }
+
+              private void InputBox_GotFocus(object sender, RoutedEventArgs e)
+              {
+                     if (inputBox.Text == "Enter your text here...")
+                     {
+                            inputBox.Text = "";
+                     }
+              }
+
+              private void InputBox_LostFocus(object sender, RoutedEventArgs e)
+              {
+                     if (string.IsNullOrWhiteSpace(inputBox.Text))
+                     {
+                            inputBox.Text = "Enter your text here...";
+                     }
               }
        }
 }
