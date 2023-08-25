@@ -24,7 +24,7 @@ namespace to_do_list
               {
                      InitializeComponent();
               }
-
+              
               private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
               {
 
@@ -37,7 +37,9 @@ namespace to_do_list
 
               private void Button_Click(object sender, RoutedEventArgs e)
               {
-
+                  string input = inputBox.Text;
+                     TaskManager tokenManager = new();
+                     tokenManager.CreatingTask(input);
               }
        }
 }
