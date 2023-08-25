@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="inputBox"  HorizontalAlignment="Left" Height="41" Margin="154,102,0,0" TextWrapping="Wrap" Text="Text" VerticalAlignment="Top" Width="219" TextChanged="TextBox_TextChanged" TextAlignment="Center" Background="#FF878787" BorderBrush="White" Foreground="White" Cursor="Hand" FontFamily="Arial" FontSize="16" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center"/>
-        <Button x:Name="AddBtn" Content="Add Task" HorizontalAlignment="Left" Height="41" Margin="486,102,0,0" VerticalAlignment="Top" Width="147" Click="Button_Click" FontSize="18" FontFamily="Arial" Background="Red" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White"/>
-        <ListBox x:Name="listBox" HorizontalAlignment="Center" Height="202" Margin="0,182,0,0" VerticalAlignment="Top" Width="164" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <TextBox x:Name="inputBox"  HorizontalAlignment="Left" Height="40" Margin="459,110,0,0" TextWrapping="Wrap" Text="Text" VerticalAlignment="Top" Width="219" ContextMenuOpening="TextBox_TextChanged" TextAlignment="Center" Background="#FF878787" BorderBrush="White" Foreground="White" Cursor="Hand" FontFamily="Arial" FontSize="16" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center"/>
+        <Button x:Name="AddBtn" Content="Add Task" HorizontalAlignment="Left" Height="58" Margin="477,0,0,0" VerticalAlignment="Center" Width="183" Click="Button_Click" FontSize="18" FontFamily="Arial" Background="Red" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="White" RenderTransformOrigin="0.272,2.304"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="202" Margin="224,93,0,0" VerticalAlignment="Top" Width="164" d:ItemsSource="{d:SampleData ItemCount=5}" FontWeight="Bold" FontFamily="Arial" FontSize="14" IsSynchronizedWithCurrentItem="True"/>
     </Grid>
 </Window>

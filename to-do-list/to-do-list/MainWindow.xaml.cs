@@ -32,16 +32,16 @@ namespace to_do_list
 
               }
 
-              private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+              private void TextBox_Click(object sender, TextChangedEventArgs e)
               {
-
+                     inputBox.Text = string.Empty;
               }
 
               private void Button_Click(object sender, RoutedEventArgs e)
               {
                      string input = inputBox.Text;
                      inputBox.Text = "";
-                     int id = taskManager.Tasks.Count;
+                     int id = taskManager.Tasks.Count + 1;
 
                      Task task = new(input, id);
 
