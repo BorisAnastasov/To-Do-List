@@ -25,7 +25,8 @@ namespace to_do_list
                      listBox.Items.Clear();
                      foreach (Task task in tasks)
                      {
-                            listBox.Items.Add($"{task.RadioButton} {task.Id}. {task.Description}");
+                            ItemsControl item = new ItemsControl();
+                            listBox.Items.Add($"{task.Id}. {task.Description}");
                      }
               }
        }
