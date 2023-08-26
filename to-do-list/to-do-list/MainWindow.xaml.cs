@@ -31,15 +31,22 @@ namespace to_do_list
 
               private void Button_Click(object sender, RoutedEventArgs e)
               {
-                     string input = inputBox.Text;
-                     inputBox.Text = "";
-                     int id = taskManager.Tasks.Count + 1;
+                     if (inputBox.Text == "Enter your text here..." || string.IsNullOrWhiteSpace(inputBox.Text))
+                     {
+                            MessageBox.Show("Enter a valid task!");
+                     }
+                     else
+                     {
+                            string input = inputBox.Text;
+                            inputBox.Text = "";
+                            int id = taskManager.Tasks.Count + 1;
 
-                     Task task = new(input, id);
+                            Task task = new(input, id);
 
-                     taskManager.AddTask(task);
+                            taskManager.AddTask(task);
 
-                     taskManager.ShowAllTasks(listBox);
+                            taskManager.ShowAllTasks(listBox);
+                     }
               }
 
               private void InputBox_GotFocus(object sender, RoutedEventArgs e)
